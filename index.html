@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>VIORD ESPORTS Recruitment</title>
+
+<style>
+body{
+background:#0f0f0f;
+color:white;
+font-family:Arial;
+text-align:center;
+padding:30px;
+}
+
+.container{
+background:#1a1a1a;
+padding:30px;
+border-radius:10px;
+max-width:400px;
+margin:auto;
+}
+
+input,select{
+width:100%;
+padding:12px;
+margin:10px 0;
+background:#0f0f0f;
+border:1px solid #333;
+color:white;
+border-radius:5px;
+}
+
+button{
+background:#00ff88;
+border:none;
+padding:12px;
+width:100%;
+font-weight:bold;
+border-radius:5px;
+cursor:pointer;
+}
+</style>
+</head>
+
+<body>
+
+<h1>VIORD ESPORTS</h1>
+<p>Apply for Free Fire Roster</p>
+
+<div class="container">
+
+<form id="applyForm">
+
+<input type="text" id="name" placeholder="Real Name" required>
+
+<input type="number" id="uid" placeholder="Free Fire UID" required>
+
+<select id="rank" required>
+<option value="">Select Rank</option>
+<option>Heroic</option>
+<option>Grandmaster</option>
+<option>Diamond</option>
+<option>Other</option>
+</select>
+
+<select id="role" required>
+<option value="">Preferred Role</option>
+<option>IGL</option>
+<option>Entry Fragger</option>
+<option>Support</option>
+<option>Lurker</option>
+</select>
+
+<input type="text" id="contact" placeholder="Your WhatsApp Number" required>
+
+<button type="submit">Submit Application</button>
+
+</form>
+
+</div>
+
+<script>
+
+document.getElementById("applyForm").addEventListener("submit", function(e){
+
+e.preventDefault();
+
+var name=document.getElementById("name").value;
+var uid=document.getElementById("uid").value;
+var rank=document.getElementById("rank").value;
+var role=document.getElementById("role").value;
+var contact=document.getElementById("contact").value;
+
+var message="VIORD ESPORTS APPLICATION:%0A%0A"+
+"Name: "+name+"%0A"+
+"UID: "+uid+"%0A"+
+"Rank: "+rank+"%0A"+
+"Role: "+role+"%0A"+
+"Player Contact: "+contact;
+
+var phone="917063430146"; 
+
+window.open("https://wa.me/"+phone+"?text="+message);
+
+});
+
+</script>
+
+</body>
+</html>
